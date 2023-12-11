@@ -1,0 +1,37 @@
+.container-popup {
+    flex: 1; /* Allow the container to take up the available space */
+    display: flex;
+    align-items: center;
+    justify-content: start;
+  }
+
+  .bottom-center {
+    width: 200px; /* Set the width of your div */
+    height: 50px; /* Set the height of your div */
+    background-color: #3498db; /* Optional background color for the centered div */
+    position: relative;
+    bottom: 0;
+  }
+
+.modal-config{
+    position: fixed;
+    height: 150px;
+    width: 250px;
+    padding: 2vh;
+    background-color: rgb(118, 163, 118);
+    border-radius: 30px;
+    margin: 3vh;
+    text-align: center;
+}
+
+.show-for-5-seconds {
+    opacity: 0; 
+    animation: fadeInOut 5s ease-in-out forwards; 
+  }
+
+  @keyframes fadeInOut {
+    0% { opacity: 0; }
+    20% { opacity: 1; }
+    80% { opacity: 1; } 
+    100% { opacity: 0; } 
+  }

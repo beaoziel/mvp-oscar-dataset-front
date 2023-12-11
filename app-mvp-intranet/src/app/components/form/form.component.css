@@ -1,0 +1,42 @@
+.background{
+    background-color: #2E4450;
+}
+
+.form-background{
+    background-color: #527C88;
+    color: white;
+}
+
+.circle {
+    border-radius: 50%;
+    width: 35vh;
+    height: 35vh;
+    padding: 10px;
+    background: #2E4450;
+    border: 40px solid #D7BAAD;
+    color: white;
+    text-align: center;
+    font-size: 13vh;
+    font-weight: lighter;
+  }
+
+  .circle-off {
+    background: #2E4450;
+    border: 40px solid #527c8827;
+  }
+
+  .circle-loading {
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    animation-name: change-color;
+  }
+
+  @keyframes change-color {
+    from {
+      border: 40px solid #2b9fbe27;
+    }
+    to {
+      border: 40px solid #89DEE2;
+    }
+  }

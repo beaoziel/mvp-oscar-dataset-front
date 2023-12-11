@@ -1,0 +1,31 @@
+
+  <section class="container-fluid text-white p-4 banner">
+ 
+    <div class="d-flex flex-row justify-content-evenly align-items-center">
+        <div class="d-flex flex-column mb-2 p-4 text-white " style="width: 40%;">
+            <h1> <b>  <i> DEVELOPER ? </i></b> </h1>
+                <!-- <i> A SAÚM aprecia a participação da comunidade, para sempre entregar os melhores resultados!</i><br> -->
+               <span class="fs-5">Caso queira realizar um upload de um Dataset e o utilizar nas previsões, faça o upload do arquivo e confirme a sua seleção.</span> 
+            
+            <footer class="fw-lighter fst-italic" style="color: #527C88;">* Para garantir a acurácia e veracidade, 
+                somente serão aceitos uploads mediante ao código de desenvolvedor SAÚM. </footer> <br>
+                <button type="button" class="btn-all" style="width: 100%;" (click)="displayBox()">Enviar Dataset</button>
+                <br>
+                <div class="card" style="background-color: #527C88;" *ngIf="visible">
+                    <div class="card-body text-center" style="color: white;">
+                        <input class="m-3" type="file" name="file" accept=".csv" (change)="onChange($event)" required> <br>
+                        <input class="input-all m-2" [(ngModel)]="input_value"  type="password" required id="pass_input" placeholder="Informar código secreto SAÚM"/> <br>
+                        <button class="btn-all mt-4" (click)="getValue()">Enviar</button> <br>
+                        <h6 class="p-2 mt-2" style="color: #7D1010;">{{message}}</h6>
+                    </div>
+                </div>
+                
+               
+        </div>
+        
+        <div>
+            <img src="../../../assets/Code review-amico.png" class="img-fluid custom-height p-4" alt="developer woman">
+        </div>
+       
+    </div>
+</section>

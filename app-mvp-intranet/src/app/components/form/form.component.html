@@ -1,0 +1,93 @@
+<section class="background p-4">
+    <div class="container-fluid background p-4 mb-5" style="max-width: 80rem;">
+        <div class="row">
+          
+            <div class="col-sm-6">
+                <div class="card form-background">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">1. Download do template</h5>
+                        <p class="card-text m-4">Baixe o template e o preencha com as suas informações. <br>
+                            Seus dados não serão usados futuramente. </p>
+                        <button class="btn-all" (click)="downloadCSV()">Download </button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="card form-background">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">2. Upload do arquivo XLSX</h5>
+
+                        <div>
+                            <input class="m-4" type="file" name="file" accept=".xlsx" required (change)="onChange($event)"> <br>
+                            <button class="btn-all" (click)="onUpload()">Enviar</button> 
+                        </div>
+                    </div>
+                    <div style="color: #7D1010; padding-left: 2%;" >{{mensagem}}</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid background p-4 mt-5" style="max-width: 90rem;">
+        <div class="d-flex flex-row mb-2 justify-content-between" *ngIf="visible; else results" >
+            <div class="d-flex justify-content-center" style="width: 60%;">
+                <div class="p-4 circle fw-bold fst-italic">
+                    0{{group_number}}
+                </div>
+            </div>
+          
+            <div class="d-flex flex-column mb-2 p-4 text-white justify-content-center" style="width: 60%;">
+                <div class="fw-bold fst-italic" style="font-size: 6vh;">
+                    {{group_result}}
+                </div>
+                <div class="fs-3 fw-lighter ">
+                    Seu estilo de vida se assemelha ao das pessoas do grupo {{text_result}}.
+                </div>
+                <br>
+                <footer class="fw-lighter" style="color: #527C88;">Lembre-se de que o <i> SAÚM </i> não leva em consideração a composição corporal
+                     ou a distribuição de gordura. É sempre aconselhável discutir qualquer preocupação com peso ou saúde com um profissional de saúde,
+                      pois ele pode fornecer uma avaliação mais completa e personalizada.</footer>
+            </div>   
+        </div>
+
+        <div class="d-flex flex-row mb-2 justify-content-between" *ngIf="loading"> 
+            <div class="d-flex justify-content-center" style="width: 60%;">
+                <div class="p-4 circle circle-loading fw-bold fst-italic"></div>
+            </div>
+          
+            <div class="d-flex flex-column mb-2 p-4 text-white justify-content-center" style="width: 60%;">
+                <div class="fw-bold fst-italic" style="font-size: 6vh;"></div>
+                <div class="fs-3 fw-lighter ">
+                    Gerando seus resultados ... <br>
+                    Lembre-se de que a predição é apenas de <b>1</b> pessoa.
+                </div>
+                <br>
+                <footer class="fw-lighter" style="color: #527C88;">Lembre-se de que o <i> SAÚM </i> não leva em consideração a composição corporal
+                     ou a distribuição de gordura. É sempre aconselhável discutir qualquer preocupação com peso ou saúde com um profissional de saúde,
+                      pois ele pode fornecer uma avaliação mais completa e personalizada.</footer>
+            </div>
+        </div> 
+
+        <ng-template #results>
+            <div class="d-flex flex-row mb-2 justify-content-between" *ngIf="loaded">
+                <div class="d-flex justify-content-center" style="width: 60%;">
+                    <div class="p-4 circle circle-off fw-bold fst-italic"></div>
+                </div>
+              
+                <div class="d-flex flex-column mb-2 p-4 text-white justify-content-center" style="width: 60%;">
+                    <div class="fw-bold fst-italic" style="font-size: 6vh;"></div>
+                    <div class="fs-3 fw-lighter ">
+                        Faça o upload do arquivo para ver o seu resultado. <br>
+                        Lembre-se de que a predição é apenas de <b>1</b> pessoa.
+                    </div>
+                    <br>
+                    <footer class="fw-lighter" style="color: #527C88;">Lembre-se de que o <i> SAÚM </i> não leva em consideração a composição corporal
+                         ou a distribuição de gordura. É sempre aconselhável discutir qualquer preocupação com peso ou saúde com um profissional de saúde,
+                          pois ele pode fornecer uma avaliação mais completa e personalizada.</footer>
+                </div>
+            </div>
+        </ng-template>
+        
+    </div>
+
+</section>
