@@ -27,13 +27,15 @@ export class FormComponent {
     this.mensagem = ""
     this.loading = false
     this.loaded = true
+    this.visible = false
 } 
 
 onUpload() { 
   
   if (this.file?.name != null) {
     this.loading = !this.loading;
-    this.loaded = !this.loaded;
+    this.loaded = false
+    this.visible = false
     setTimeout(() => {
       this.svc.upload(this.file).subscribe(
         (event: any) => {

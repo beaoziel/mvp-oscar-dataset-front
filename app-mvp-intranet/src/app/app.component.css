@@ -8,7 +8,6 @@
   .bottom-center {
     width: 200px; /* Set the width of your div */
     height: 50px; /* Set the height of your div */
-    background-color: #3498db; /* Optional background color for the centered div */
     position: relative;
     bottom: 0;
   }

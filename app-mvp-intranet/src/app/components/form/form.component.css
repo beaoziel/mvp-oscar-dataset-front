@@ -1,5 +1,5 @@
 .background{
-    background-color: #2E4450;
+  background-color: #2f566b;
 }
 
 .form-background{
@@ -12,7 +12,7 @@
     width: 35vh;
     height: 35vh;
     padding: 10px;
-    background: #2E4450;
+    background: #2f566b;
     border: 40px solid #D7BAAD;
     color: white;
     text-align: center;
@@ -21,8 +21,7 @@
   }
 
   .circle-off {
-    background: #2E4450;
-    border: 40px solid #527c8827;
+    border: 40px solid rgba(122, 178, 194, 0.153)
   }
 
   .circle-loading {
@@ -34,7 +33,7 @@
 
   @keyframes change-color {
     from {
-      border: 40px solid #2b9fbe27;
+      border: 40px solid rgba(122, 178, 194, 0.153);
     }
     to {
       border: 40px solid #89DEE2;
